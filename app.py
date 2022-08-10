@@ -1,9 +1,17 @@
 from keras.models import load_model
 import cv2
 import numpy as np
+from flask import Flask, request, jsonify, render_template
 
+app=Flask(__name__)
 model = load_model('cnn_face_mask.h5')
 
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/predict',methods=["POST"])
 face_clsfr=cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 source=cv2.VideoCapture(0)
@@ -41,3 +49,6 @@ while(True):
         
 cv2.destroyAllWindows()
 source.release()
+
+if __name__=='__main__':
+    app.run(host='0.0.0.0', port=8000)
