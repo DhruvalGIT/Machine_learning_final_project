@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Mask Detection</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href='C:\web development\AI enterprise\style.css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Are you wearing a mask?</h1>
+ </div>
+
+
+<div class="predict">
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="{{ url_for('Let's try')}}"method="post">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let's try</button>
+    </form>
+</div>
+</body>
+</html>
