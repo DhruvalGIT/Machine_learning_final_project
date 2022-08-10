@@ -2,7 +2,7 @@ from keras.models import load_model
 import cv2
 import numpy as np
 
-model = load_model('C:\web development\ML_AI_Enterprise\cnn_face_mask.h5')
+model = load_model('cnn_face_mask.h5')
 
 face_clsfr=cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
