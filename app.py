@@ -9,12 +9,12 @@ app=Flask(__name__)
 
 model = load_model('cnn_face_mask.h5')
 
-@app.route('/')
+@app.route('/',methods=["POST","GET"])
 def home():
     return render_template('index.html')
 
 
-@app.route('/predict',methods=["POST"])
+@app.route('/predict',methods=["POST","GET"])
 def predict():
     face_clsfr=cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
     source=cv2.VideoCapture(0)
