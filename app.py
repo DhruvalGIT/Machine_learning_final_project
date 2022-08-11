@@ -17,7 +17,7 @@ def predict():
     source=cv2.VideoCapture(0)
 
     labels_dict={0:'MASK',1:'NO MASK'}
-    color_dict={1:(0,255,0),0:(0,0,255)}
+    color_dict={0:(0,255,0),1:(0,0,255)}
 
     while(True):
 
@@ -51,4 +51,4 @@ def predict():
     source.release()
 
 if __name__=='__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run()
