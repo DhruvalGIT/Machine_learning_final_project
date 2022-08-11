@@ -9,6 +9,7 @@ app=Flask(__name__)
 
 model = load_model('cnn_face_mask.h5')
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
