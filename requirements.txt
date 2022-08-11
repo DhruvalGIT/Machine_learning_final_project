@@ -1,16 +1,9 @@
 Flask
-gunicorn
-itsdangerous
-Jinja2
-MarkupSafe
-Werkzeug
 numpy
 scipy
 scikit-learn
 matplotlib
 pandas
-Cython
-tensorflow
 keras
 opencv-python
 opencv-python-headless
